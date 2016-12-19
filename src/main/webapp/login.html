@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>阳光</title>
+		<link rel="stylesheet" href="css/index.css" />
+		
+		<style type="text/css">
+			.unwelcomeie{
+				width:600px;
+				margin:100px auto;
+				border:15px solid #ccc;
+				padding: 20px;
+				background-color: #fff;
+				color: #000;
+			}
+			.unwelcomeie .tittle{
+				font-size: 26px;
+			}
+			.unwelcomeie p{
+				line-height: 26px;
+				margin-top: 5px;
+			}
+			.unwelcomeie ul li{
+				width: 180px;
+				list-style: none;
+				float: left;
+				text-align: center;
+			}
+			.unwelcomeie ul li div{
+				margin-top: 5px;
+			}
+			.unwelcomeie ul li a{
+				text-align: center;
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				line-height: 30px;
+				text-decoration: none;
+				background-color: #02c67c;
+				border-radius: 3px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="clear">
+			<div class="navLogo">
+				<h1>
+					<a href="http://apeclass.cn/" target="_blank"><img src="img/logo_01.png" alt="海棠学院web前端学习新体验"/></a>
+				</h1>
+			</div>
+			<ul>
+				<li><a href="http://apeclass.cn/" target="_blank">网站主页 </a></li>      
+				<li><a href="javascript:;">金融理财 </a></li>      
+				<li><a href="javascript:;">理财大师 </a></li>      
+				<li><a href="javascript:;">SunShineTeam</a></li>
+			</ul>
+		</nav>
+		<!-- <canvas class="canvas" width="1000" height="188"></canvas> -->
+		<section id="banner">
+			<div class="center">
+				<div class="title">
+					<p>高级理财顾问</p>
+					<div class="text">
+						<div></div>
+						<div></div>
+					</div>
+					<p>立等可取，更享千元优惠卷</p>
+					<p>（*全宇宙仅有50个优惠名额）</p>
+				</div>
+				<div class="btn">
+						<a href="http://apeclass.cn/article/51" target="_blank">入手</a>
+						<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=1668940413&site=qq&menu=yes" target="_blank">深入</a> -->
+						<a href="http://kefu.qycn.com/vclient/chat/?websiteid=120097" target="_blank">深入</a>
+					</div>
+			</div>
+		</section>
+		<section id="second">
+			<div class="header" id="anchor1">
+				<h2>海棠前端，精品课程</h2>
+				<div class="line"></div>
+				<h3>六大教学亮点，让学习不再难</h3>
+			</div>
+			<div class="circle">
+				<div>
+					<p>一线工程师</p>
+					<p>多年实战开发</p>
+					<p>作业讲解点评</p>
+					<p><strong>百度名师亲自授课</strong></p>
+				</div>
+				<div>
+					<p><strong>在线学习</strong></p>
+					<p>精品录播课程</p>
+					<p>讲师直播互动</p>
+					<p>悉心技术辅导</p>
+				</div>
+				<div>
+					<p><strong>精品小班授课</strong></p>
+					<p>名师1vs1指导</p>
+					<p>拒绝百人大班</p>
+					<p>问题快速响应</p>
+				</div>
+				<div>
+					<p><strong>行业底价学费</strong></p>
+					<p>实体班1/3学费</p>
+					<p>0风险试学</p>
+					<p>满意后再付费</p>
+				</div>
+				<div>
+					<p><strong>免费重修</strong></p>
+					<p>实战案例讲解</p>
+					<p>自由把控时间</p>
+					<p>0代价免费重修</p>
+				</div>
+				<div>
+					<p><strong>不满意退费</strong></p>
+					<p>入学合同保障</p>
+					<p>无须学费担忧</p>
+					<p>退费畅通便捷</p>
+				</div>
+				<div id="number" class="number">
+					<div>6</div>
+					<div>6</div>
+					<div>6</div>
+					<div>6</div>
+					<div>6</div>
+					<div>6</div>
+				</div>
+			</div>
+		</section>
+		<section id="third">
+			<div class="header">
+				<h2>四大亮点在线学</h2>
+				<div class="line"></div>
+				<h3>一步一步成为 web 大前端高手</h3>
+			</div>
+			<div class="text">
+				<dl>
+					<dt>①精品录播</dt>
+					<dd>
+						根据课程难度，一周1~3个章节的速度，学员须在一周内完成规定的章节学习。课程后会有作业给到学员
+					</dd>
+				</dl>
+				<dl>
+					<dt>②在线直播</dt>
+					<dd>
+						每周不少于1~2次直播课程，答疑解惑，辅导作业，带领项目。
+					</dd>
+				</dl>
+				<dl>
+					<dt>③教学管理</dt>
+					<dd>
+						助教老师会监督管理学员学习状况，包括作业是否上交，直播课是否参加等。
+					</dd>
+				</dl>
+				<dl>
+					<dt>④技术辅导</dt>
+					<dd>
+						学习期间，技术问题都可以询问讲师，包括内部学习QQ群、学习平台、微信等
+					</dd>
+				</dl>
+				<div class="xLine"></div>
+				<div class="yLine"></div>
+			</div>
+		</section>
+		<section id="photo">
+			<div class="header">
+				<h2>海棠理念</h2>
+				<div class="line"></div>
+				<h3>前端路上有我们与你同行</h3>
+			</div>
+			<ul class="clear">
+				<li>
+					<img src="img/photo_01.jpg"/>
+					<div>
+						<dl>
+							<dt>认识讲师</dt>
+							<dd>
+								<p>你看到的，你所认同的，在这里都将被实现。学习艰辛，我们一路同行</p>
+							</dd>
+						</dl>
+						<a href="javascript:;"></a>
+					</div>
+				</li>
+				<li>
+					<img src="img/photo_02.jpg"/>
+					<div>
+						<dl>
+							<dt>教学管理</dt>
+							<dd>
+								<p>或许看上去不会那么"友善"，甚至略微苛刻，我们相信您也期待一个新的学习体验。</p>
+							</dd>
+						</dl>
+						<a href="javascript:;"></a>
+					</div>
+				</li>
+				<li>
+					<img src="img/photo_03.jpg"/>
+					<div>
+						<dl>
+							<dt>学员反馈</dt>
+							<dd>
+								<p>没有慷慨且煽情的言语，甚至不连贯的语句也测证"剧本"的可信赖性。"简单可依赖"，不只是一句口号。</p>
+							</dd>
+						</dl>
+						<a href="javascript:;"></a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section id="fourth">
+			<div class="header" id="anchor2">
+				<h2>2016最新课程体系，干货满满</h2>
+				<div class="line"></div>
+				<h3>0基础入门到高级实战进阶</h3>
+			</div>
+			<div class="mainBg clear">
+				<div class="main">
+					<div class="left">
+						<div class="box">
+							<div class="clear">
+								<div class="order">01</div>
+								<div class="topLine"></div>
+							</div>
+							<div class="clear">
+								<p class="year">99元区域</p>
+								<dl>
+									<dt>前端如何入门</dt>
+									<dd>1、前端开发是什么</dd>
+									<dd>2、编辑器、PS、盒模型</dd>
+									<dd>3、标签使用&选择器</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<div class="order">03</div>
+								<div class="topLine"></div>
+							</div>
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>移动端</dt>
+									<dd>1、移动端入门</dd>
+									<dd>2、移动端布局</dd>
+									<dd>3、less&响应式</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<div class="order">05</div>
+								<div class="topLine"></div>
+							</div>
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>JS初级</dt>
+									<dd>1、数据类型&流程控制</dd>
+									<dd>2、定时器&日期对象</dd>
+									<dd>3、字符串&数组</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<div class="order">07</div>
+								<div class="topLine"></div>
+							</div>
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>JS高级</dt>
+									<dd>1、正则表达式&面向对象</dd>
+									<dd>2、jQuery&Ajax</dd>
+									<dd>3、JQuery插件</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="mCenter">
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="arc">
+							<div></div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="box">
+							<div class="clear">
+								<p class="year">99元区域</p>
+								<dl>
+									<dt>JS初识</dt>
+									<dd>1、变量、函数、字符串</dd>
+									<dd>2、流程控制、for循环</dd>
+									<dd>3、选项卡、作用域、闭包</dd>
+								</dl>
+							</div>
+							<div class="clear">
+								<div class="order">02</div>
+								<div class="topLine"></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>JS入门</dt>
+									<dd>1、数组</dd>
+									<dd>2、Math对象</dd>
+									<dd>3、定时器、日期对象</dd>
+								</dl>
+							</div>
+							<div class="clear">
+								<div class="order">04</div>
+								<div class="topLine"></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>JS中级</dt>
+									<dd>1、DOM&表格表单的操作</dd>
+									<dd>2、BOM</dd>
+									<dd>3、事件类型&事件对象</dd>
+								</dl>
+							</div>
+							<div class="clear">
+								<div class="order">06</div>
+								<div class="topLine"></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="clear">
+								<p class="year"></p>
+								<dl>
+									<dt>JS全栈</dt>
+									<dd>1、EC6&移动端基础时间</dd>
+									<dd>2、nodeJS</dd>
+									<dd>3、Git&react</dd>
+								</dl>
+							</div>
+							<div class="clear">
+								<div class="order">08</div>
+								<div class="topLine"></div>
+							</div>
+						</div>
+					</div>
+					<div class="rightBtn">
+						<div><span>99元入学</span></div>
+						<div><span>开课一周后再决定是否继续学习</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="yuyue">
+				<a href="http://kefu.qycn.com/vclient/chat/?websiteid=120097&clerkid=1740436" target="_blank">预约体验</a>
+			</div>
+		</section>
+		<section id="works">
+			<div class="header" id="anchor2">
+				<h2>学员作品</h2>
+				<div class="line"></div>
+				<h3>点点滴滴，聚沙成塔，成就不凡</h3>
+			</div>
+			<div class="wWrap">
+				<ul>
+					<li>
+						<img src="work_images/work_0.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_1.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_2.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_3.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_4.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_5.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_6.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_7.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_8.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_9.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_10.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_11.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_12.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_13.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_14.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_15.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_16.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_17.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_18.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_19.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_20.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_21.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_22.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<img src="work_images/work_23.jpg"/>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+				</ul>
+			</div>
+			
+		</section>
+		<div class="scrollText" id="scrollText">
+			<div>
+				<span><</span>
+				<ul>
+					<li><a href="http://www.jianshu.com/p/cd1dd03e0ce2?" target="_blank">1、【张晓宇学习笔记】-事件源对象</a></li>
+					<li><a href="stupdf/js-ch4-jiajia.pdf" target="_blank">2、【郭嘉学习笔记】-字符串、数组、JSON、Math方法</a></li>
+					<li><a href="stupdf/js-ch5-jiajia.pdf" target="_blank">3、【郭嘉学习笔记】-DOM&amp;BOM</a></li>
+					<li><a href="http://www.jianshu.com/p/205dcbbd1722" target="_blank">4、【张晓宇学习笔记】-事件绑定中的addEventListener()方法</a></li>
+				</ul>
+				<span>></span>
+			</div>
+		</div>
+		<section id="fifth">
+			<div class="header">
+				<h2>入学流程</h2>
+				<div class="line"></div>
+				<h3>报名表 -> 报名费 -> 决定是否学习 -> 正式开课</h3>
+			</div>
+			<div class="fImg"></div>
+			<div class="fCenter">
+				<div>
+					<dl>
+						<dt>Step 1</dt>
+						<dd>
+							<p>填写报名表</p>
+							<p>确定学习意向</p>
+							<p>迎接新的挑战</p>
+						</dd>
+					</dl>
+					<span>①</span>
+				</div>
+				<div>
+					<span>②</span>
+					<dl>
+						<dt>Step 2</dt>
+						<dd>
+							<p>缴纳99元报名费</p>
+							<p>锁定学习坐席</p>
+							<p>开通一周的学习权限</p>
+						</dd>
+					</dl>
+				</div>
+				<div>
+					<span>③</span>
+					<dl>
+						<dt>Step 3</dt>
+						<dd>
+							<p>决定是否继续学习</p>
+							<p>感到满意再付学费</p>
+							<p>并享受双12学费减免</p>
+						</dd>
+					</dl>
+				</div>
+				<div>
+					<span>④</span>
+					<dl>
+						<dt>Step 4</dt>
+						<dd>
+							<p>正式开课</p>
+							<p>建立内部学习群</p>
+							<p>内部学员直播课</p>
+							<p>作业讲解答疑</p>
+							<p>技术1vs1指导</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="yuyue" style="height:150px;background:none !important;">
+				
+				<!-- <a href="http://kefu.qycn.com/vclient/chat/?websiteid=120097&groupid=40710" target="_blank">预约报名</a> -->
+				<a href="http://kefu.qycn.com/vclient/chat/?websiteid=120097&clerkid=1740436" target="_blank">预约报名</a>
+			</div>		
+		</section>
+		<section class="date">
+			<h4>开课倒计时</h4>
+			<div>
+				<span>0</span>
+				<span>0</span>
+				<span class="colon">天</span>
+				<span>0</span>
+				<span>0</span>
+				<span class="colon">时</span>
+				<span>0</span>
+				<span>0</span>
+				<span class="colon">分</span>
+				<span>0</span>
+				<span>0</span>
+				<span class="colon">秒</span>
+			</div>
+		</section>
+		<section class="problem">
+			<div class="header" id="anchor3">
+				<h2>常见问题</h2>
+				<div class="line"></div>
+				<h3>关于课程、关于费用、关于你想知道的</h3>
+			</div>
+			<dl>
+				<dt><span>01</span>课程周期是多长？</dt>
+				<dd>
+					全部课程学习下来需要4.5个月左右。
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>02</span>授课方式是怎么样的？</dt>
+				<dd>
+					录播+直播+教学管理+技术辅导。
+				</dd>
+				<dd>播课程；根据课程难度，一周1~3个章节的速度，学员须在一周内完成规定的章节学习。课程后会有作业给到学员</dd>
+				<dd>直播课程；每周1~2次直播课程，答疑解惑，辅导作业，带领项目。时间一般安排在周末</dd>
+				<dd>教学管理；助教老师会监督管理学员学习状况，包括作业是否上交，直播课是否参加等。</dd>
+				<dd>技术辅导：学习期间，任何技术问题都可以询问讲师，包括内部学习QQ群、学习平台、微信等。讲师还会不定期给大家提供额外的技术案例分享。</dd>
+			</dl>
+			<dl>
+				<dt><span>03</span>学习时间如何安排？</dt>
+				<dd>
+					每周我们会给到您固定的章节课程，一般是1~3章的内容，在规定时间内完成规定的课程就好。期间有任何技术问题都可以向讲师提问
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>04</span>直播课怎么安排？</dt>
+				<dd>
+					直播课根据课程难易度，每周1~2次。讲师会带领大家写作业，答疑解惑。时间会安排在周末，单次直播再一个半小时左右。（注：直播课从js阶段开始。html/css阶段课程将不做直播）
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>05</span>如果错过直播还可以回放吗？</dt>
+				<dd>
+					可以。
+				</dd>
+				<dd>但是我们强烈建议您参加直播课，可以和讲师互动提问。如果确实有事错过，我们会把直播课录播成视频给到大家。</dd>
+			</dl>
+			<dl>
+				<dt><span>06</span>我0基础可以学得会吗？</dt>
+				<dd>
+					可以。
+				</dd>
+				<dd>但是您做好了学习一项技能的准备了吗？如果你已经准备好了，那剩下的就交给我们。</dd>
+			</dl>
+			<dl>
+				<dt><span>07</span>我有基础可以从js开始学习吗？</dt>
+				<dd>
+					可以。
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>08</span>我已经是前端工程师了，可以只学习后面的高级课程吗？</dt>
+				<dd>
+					暂不支持跳跃式学习。我们有安排具体的课程进度，“按部就班”的学习是海棠推崇的。
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>09</span>能不能不要你们的教学服务，只买你们的视频？</dt>
+				<dd>
+					我倒也想把一套视频卖个大几千，谁买呢？
+				</dd>
+				<dd>自己看视频和自学无异，如果你具备极好的自学能力，相信不看海棠的视频依然可以学的很好。网上免费得视频这么多，建议去各大前端论坛，淘宝去寻找/购买</dd>
+			</dl>
+			<dl>
+				<dt><span>10</span>学不会可以重读吗？</dt>
+				<dd>
+					可以。
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>11</span>入学流程</dt>
+				<dd>
+					99元体验海棠正式课程一周时间，包括录播+直播+教学管理+技术指导。感受不错后再付全额学费。付款后，我们会给到您一份入学合同+书籍。合同会规定我们的课时、直播课、答疑等责任。书籍给您做工具书查阅使用。
+				</dd>
+			</dl>
+			<dl>
+				<dt><span>12</span>99元可以体验多少课程？</dt>
+				<dd>99元即可体验到海棠正式课程（包括html、css<strong>全部</strong>课程，js阶段两章正课），共计<strong>一周</strong>的学习权限。感到不满意，我们会退还您99元，并收回课程学习权限。</dd>
+			</dl>
+			<dl>
+				<dt><span>13</span>双十二的活动是怎样的？</dt>
+				<dd>
+					教育行业本来不应该搞什么“大促”之类的活动，教育就是教育，打啥折？
+				</dd>
+				<dd>不过好在学费打折，教学质量不打折。99元为课程报名费，可开通的学习权限有html+css的全部课程，js阶段的前两章课程。体验学习课程周期为一周，若对课程感到满意，可以全款报名学习课程。作为回馈，参与本活动的同学可以享受学费减免1212元的优惠。*全宇宙只有50个优惠名额。</dd>
+			</dl>
+			<dl>
+				<dt><span>14</span>如何报名？</dt>
+				<dd>
+					请点击右侧咨询窗口~
+				</dd>
+			</dl>
+		</section>
+		<footer>
+			<div class="mts">课程内容版权均归<a href="http://apeclass.cn/">北京海棠优学教育科技有限公司</a>所有<a href="http://www.miibeian.gov.cn/" target="_blank" style="padding-left: 50px;">ICP备16020780号-1</a>
+            </div>
+		</footer>
+		<div id="back">top</div>
+		
+		<div id="shadowBox"></div>
+		<div id="showPic">
+			<div class="prev"></div>
+			<div class="img">
+				<img style="z-index: 1;" src="work_images/work_0_big.jpg"/>
+				<img style="z-index: 2;" src="work_images/work_1_big.jpg"/>
+				<a href="#" target="_blank">查看作品</a>
+			</div>
+			<div class="next"></div>
+		</div>
+		<script src="js/index.js"></script>
+		<script src="js/move.js"></script>
+		<script type="text/javascript">
+        	var client=function(){
+				var engine={    //呈现引擎
+			      trident:0,
+			      gecko:0,
+			      webkit:0,
+			      khtml:0,
+			      presto:0,
+			      ver:null     //具体的版本号
+			   };
+			   var browser={   //浏览器
+			      ie:0,
+			      firefox:0,
+			      safari:0,
+			      konq:0,
+			      opera:0,
+			      chrome:0,
+			      ver:null     //具体的版本号
+			   };
+			   var system={    //操作系统
+			      win:false,
+			      mac:false,
+			      x11:false
+			   };
+
+			   var ua=navigator.userAgent;
+			   if(/AppleWebKit\/(\S+)/.test(ua)){        //匹配Webkit内核浏览器（Chrome、Safari、新Opera）
+			      engine.ver=RegExp["$1"];
+			      engine.webkit=parseFloat(engine.ver);
+			      if(/OPR\/(\S+)/.test(ua)){             //确定是不是引用了Webkit内核的Opera
+			         browser.ver=RegExp["$1"];
+			         browser.opera=parseFloat(browser.ver);
+			      }else if(/Chrome\/(\S+)/.test(ua)){    //确定是不是Chrome
+			         browser.ver=RegExp["$1"];
+			         browser.chrome=parseFloat(browser.ver);
+			      }else if(/Version\/(\S+)/.test(ua)){   //确定是不是高版本（3+）的Safari
+			         browser.ver=RegExp["$1"];
+			         browser.safari=parseFloat(browser.ver);
+			      }else{                                 //近似地确定低版本Safafi版本号
+			         var SafariVersion=1;
+			         if(engine.webkit<100){
+			            SafariVersion=1;
+			         }else if(engine.webkit<312){
+			            SafariVersion=1.2;
+			         }else if(engine.webkit<412){
+			            SafariVersion=1.3;
+			         }else{
+			            SafariVersion=2;
+			         }
+			            browser.safari=browser.ver=SafariVersion;
+			      }
+			   }else if(window.opera){                 //只匹配拥有Presto内核的老版本Opera 5+(12.15-)
+			      engine.ver=browser.ver=window.opera.version();
+			      engine.presto=browser.opera=parseFloat(engine.ver);
+			   }else if(/Opera[\/\s](\S+)/.test(ua)){  //匹配不支持window.opera的Opera 5-或伪装的Opera
+			      engine.ver=browser.ver=RegExp["$1"];
+			      engine.presto=browser.opera=parseFloat(engine.ver);
+			   }else if(/KHTML\/(\S+)/.test(ua)||/Konqueror\/([^;]+)/.test(ua)){
+			      engine.ver=browser.ver=RegExp["$1"];
+			      engine.khtml=browser.konq=parseFloat(engine.ver);
+			   }else if(/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)){ //判断是不是基于Gecko内核
+			      engine.ver=RegExp["$1"];
+			      engine.gecko=parseFloat(engine.ver);
+			      if(/Firefox\/(\S+)/.test(ua)){                //确定是不是Firefox
+			         browser.ver=RegExp["$1"];
+			         browser.firefox=parseFloat(browser.ver);
+			      }
+			   }else if(/Trident\/([\d\.]+)/.test(ua)){         //确定是否是Trident内核的浏览器（IE8+）
+			      engine.ver=RegExp["$1"];
+			      engine.trident=parseFloat(engine.ver);
+			      if(/rv\:([\d\.]+)/.test(ua)||/MSIE ([^;]+)/.test(ua)){   //匹配IE8-11+
+			         browser.ver=RegExp["$1"];
+			         browser.ie=parseFloat(browser.ver);
+			      }
+			   }else if(/MSIE ([^;]+)/.test(ua)){               //匹配IE6、IE7
+			      browser.ver=RegExp["$1"];
+			      browser.ie=parseFloat(browser.ver);
+			      engine.ver=browser.ie-4.0;                    //模拟IE6、IE7中的Trident值
+			      engine.trident=parseFloat(engine.ver);
+			   }
+
+			   var p=navigator.platform;                        //判断操作系统
+			   system.win=p.indexOf("Win")==0;
+			   system.mac=p.indexOf("Mac")==0;
+			   system.x11=(p.indexOf("X11")==0)||(p.indexOf("Linux")==0);
+			   if(system.win){
+			      if(/Win(?:dows )?([^do]{2})\s?(\d+\.\d+)?/.test(ua)){
+			         if(RegExp["$1"]=="NT"){
+			            system.win = ({
+			               "5.0" : "2000",
+			               "5.1" : "XP",
+			               "6.0" : "Vista",
+			               "6.1" : "7",
+			               "6.2" : "8",
+			               "6.3" : "8.1",
+			               "10" : "10"
+			            })[RegExp["$2"]] || "NT";
+			         }else if(RegExp["$1"]=="9x"){
+			            system.win="ME";
+			         }else{
+			            system.win=RegExp["$1"];
+			         }
+			      }
+			   }
+
+			   return {
+			      ua:ua,          //用户浏览器Ua原文
+			      engine:engine,  //包含着用户浏览器引擎（内核）信息
+			      browser:browser,//包括用户浏览器品牌与版本信息
+			      system:system   //用户所用操作系统及版本信息
+			   };
+
+			}();
+			var iehtml = '<div class="unwelcomeie">' +
+				'<p class="tittle">抱歉!</p>'+
+                '<p class="tittle">当您看到这个页面的时候，说明您使用了<b><s>IE浏览器</s></b>。</p>' +
+                '<p>本页面运用了大量的CSS3、HTML5的新特性，为了节省不必要的时间浪费（比如写个兼容？）。我们决定不支持IE以及使用IE内核的国产浏览器。</p>'+
+                '<p>想得到我们网站最佳访问效果，我们强烈建议您升级最新版的标准浏览器。比如以下推荐的浏览器。</p>' +
+                '<ul>' +
+                    '<li>' +
+                        '<div><img src="./browser-img/chrome.png"></div>' +
+                        '<div><a href="http://rj.baidu.com/soft/detail/14744.html">chrome下载</a></div>' +
+                    '</li>' +
+                    '<li>' +
+                        '<div><img src="./browser-img/firefox.png"></div>' +
+                        '<div><a href="http://rj.baidu.com/soft/detail/11843.html">firefox下载</a></div>' +
+                    '</li>' +
+                    '<li>' +
+                        '<div><img src="./browser-img/opera.png"></div>' +
+                        '<div><a href="http://rj.baidu.com/soft/detail/11508.html">opera下载</a></div>'+
+                    '</li>' +
+                '</ul>' +
+                '<div style="clear:both;"></div>' +
+            '</div>';
+            if(client.browser.ie > 1 &&  client.browser.ie < 10){
+            	document.body.innerHTML = iehtml;
+            	console.log(client.browser.ie)
+            }
+		</script>
+		<script>(function(){var c=document.createElement("script"),s=document.getElementsByTagName("script")[0];c.src="//kefu.qycn.com/vclient/state.php?webid=120097";s.parentNode.insertBefore(c,s);})();</script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?f9c22208f40feae307151a53b7becc6a";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</body>
+</html>
