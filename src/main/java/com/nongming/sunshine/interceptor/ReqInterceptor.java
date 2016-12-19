@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nongming.sunshine.entity.UseLogin;
+import com.nongming.sunshine.entity.User;
 
 /**
  Created by 宣其成 on 2016/5/8 0008.
@@ -61,7 +61,7 @@ public class ReqInterceptor implements HandlerInterceptor {
     		redirectLoginPage(request,response);
     		return false;
     	}
-    	 UseLogin user = (UseLogin) session.getAttribute("user");
+    	 User user = (User) session.getAttribute("user");
     	 int userType = user.getUserType();
  	    if(userType==1||userType==2){
  	    	return true;
