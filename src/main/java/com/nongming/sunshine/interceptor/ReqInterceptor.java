@@ -62,22 +62,24 @@ public class ReqInterceptor implements HandlerInterceptor {
     		return false;
     	}
     	 User user = (User) session.getAttribute("user");
-    	 int userType = user.getUserType();
- 	    if(userType==1||userType==2){
- 	    	return true;
- 	    }
- 	    if(userType==3){
- 	    	String url=request.getRequestURI().toString();
- 	    	if(countURL==null||url.matches(countURL)||url.matches(indexURL)){
- 	        	return true;
- 	        }	
- 	    }
- 	    if(userType==4){
- 	        String url=request.getRequestURI().toString();
- 	        if(mappingURL==null||url.matches(mappingURL)||url.matches(indexURL)){
- 	        	return true;
- 	        }
- 	    }
+    	if(user!=null){
+    		return true;
+    	}
+// 	    if(userType==1||userType==2){
+// 	    	return true;
+// 	    }
+// 	    if(userType==3){
+// 	    	String url=request.getRequestURI().toString();
+// 	    	if(countURL==null||url.matches(countURL)||url.matches(indexURL)){
+// 	        	return true;
+// 	        }	
+// 	    }
+// 	    if(userType==4){
+// 	        String url=request.getRequestURI().toString();
+// 	        if(mappingURL==null||url.matches(mappingURL)||url.matches(indexURL)){
+// 	        	return true;
+// 	        }
+// 	    }
  		return false;
     }
 
