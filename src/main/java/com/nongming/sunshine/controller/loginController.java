@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONObject;
 
 @Controller
-public class loginController {
+public class LoginController {
 	@RequestMapping("/tologin")
 	public String tologin(HttpServletRequest req,HttpServletResponse resp){
 		return "login";

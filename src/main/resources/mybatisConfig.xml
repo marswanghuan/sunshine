@@ -8,8 +8,8 @@
 		<setting name="logPrefix" value="mybatisSql." />
 	</settings>
 	<typeAliases>
-		<typeAlias alias="useLogin" type="com.nongming.sunshine.entity.UseLogin" />
-		
+		<typeAlias alias="UseLogin" type="com.nongming.sunshine.entity.UseLogin" />
+		<typeAlias alias="User" type="com.nongming.sunshine.entity.Use" />
 	</typeAliases>
 </configuration>
 
