@@ -1,18 +1,92 @@
 package com.nongming.sunshine.controller;
 
 import java.io.File;
+import java.lang.reflect.Parameter;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.alibaba.fastjson.JSONObject;
+import com.nongming.sunshine.api.APIUtil;
+import com.nongming.sunshine.api.ParameterCode;
 import com.nongming.sunshine.entity.User;
+import com.nongming.sunshine.service.UserService;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
+	@Resource
+	private UserService userservice;
+	@RequestMapping("/addUser")
+	@ResponseBody
+	public JSONObject addUser(HttpServletRequest request,HttpServletResponse response,User entity){
+		JSONObject json = new JSONObject();
+		if(entity.getEmail()==null||entity.getUserName()==null||entity.getPassword()==null){
+			json.put("state",ParameterCode.Error.SERVICE_PARAMETER);
+			json.put("msg", new APIUtil().getErrorInfo(ParameterCode.Error.SERVICE_PARAMETER));
+			json.put("data","");
+			return json;
+		}
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formater2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		String time = formater2.format(now);
+		entity.setCreateDate(time);
+		int i = userservice.addUser(entity);
+		JSONObject json1 = new JSONObject();
+		json1.put("userId",i);
+		json.put("state",ParameterCode.SUCCESS);
+		json.put("msg", new APIUtil().getErrorInfo(ParameterCode.SUCCESS));
+		json.put("data",json1);
+		return json;
+	}
+	
+	@RequestMapping("/verify")
+	@ResponseBody
+	public JSONObject verifyUser(HttpServletRequest request,HttpServletResponse response,User entity){
+		JSONObject json = new JSONObject();
+		String email = request.getParameter("email");
+		if(email==null||email.equals("")){
+			json.put("state",ParameterCode.Error.SERVICE_PARAMETER);
+			json.put("msg", new APIUtil().getErrorInfo(ParameterCode.Error.SERVICE_PARAMETER));
+			json.put("data","");
+			return json;
+		}
+		User user = userservice.verifyUser(email);
+		if(user!=null){
+			json.put("state",ParameterCode.Error.ACCOUNT_EMAIL_EXIST);
+			json.put("msg", new APIUtil().getErrorInfo(ParameterCode.Error.ACCOUNT_EMAIL_EXIST));
+			json.put("data","");
+			return json;
+		}
+		json.put("state",ParameterCode.SUCCESS);
+		json.put("msg", new APIUtil().getErrorInfo(ParameterCode.SUCCESS));
+		json.put("data","");
+		return json;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * 初始化
 	 */
