@@ -256,6 +256,7 @@
 					<include>mysql.xml</include>
 					<!--<include>redis.xml</include> -->
 					<include>logback.xml</include>
+					<include>mybatisConfig.xml</include>
 					<!-- <include>redis.properties</include> -->
 					<include>system.properties</include>
 					<include>springServlet.xml</include>

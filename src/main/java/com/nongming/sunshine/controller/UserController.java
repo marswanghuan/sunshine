@@ -86,10 +86,10 @@ public class UserController {
 	
 	
 	
-	
-	/**
+	/*
+	*//**
 	 * 初始化
-	 */
+	 *//*
 	public void index() {
 		try {
 			User per = getSessionAttr("session");
@@ -149,9 +149,9 @@ public class UserController {
 		renderJsp("/WEB-INF/jsp/about.jsp");
 	}
 
-	/**
+	*//**
 	 * 证件上传
-	 */
+	 *//*
 	public void verifyfileUpload(){
 		 String uploadFile = "";
 	     String path = UserController.class.getResource("").toString();;
@@ -296,9 +296,9 @@ public class UserController {
 		} 
 	}
 
-	/**
+	*//**
 	 * 获取短信
-	 */
+	 *//*
 	@Before(SmsInterceptor.class)
 	public void getSms() {
 		Person person = getSessionAttr("session");
@@ -319,9 +319,9 @@ public class UserController {
 		}
 	}
 	
-	/**
+	*//**
 	 * 更改新手机时，获取新短信
-	 */
+	 *//*
 	@Before(SmsInterceptor.class)
 	public void getNewSms(){
 		String newphone = getPara("newphone");
@@ -341,9 +341,9 @@ public class UserController {
 		}
 	}
 	
-	/**
+	*//**
 	 * 验证新手机短信
-	 */
+	 *//*
 	public void newPhoneSms(){
 		String keys = getPara("param");
 		String key = getSessionAttr("newsms");
@@ -354,9 +354,9 @@ public class UserController {
 		}
 	}
 
-	/**
+	*//**
 	 * 判断原支付密码是否正确
-	 */
+	 *//*
 	public void getPaymentboo() {
 		String paypassw = getPara("param");
 		Person person = getSessionAttr("session");
@@ -376,9 +376,9 @@ public class UserController {
 		}
 	}
 
-	/**
+	*//**
 	 * 判断原密码是否正确
-	 */
+	 *//*
 	public void getPasswordboo() {
 		String paword = getPara("param");
 		Person person = getSessionAttr("session");
@@ -398,9 +398,9 @@ public class UserController {
 		}
 	}
 
-	/**
+	*//**
 	 * 更换支付和登陆密码
-	 */
+	 *//*
 	@Before(UpdateInterceptor.class)
 	public void upPassword() {
 		String passwtype = getPara("passwtype");
@@ -424,9 +424,9 @@ public class UserController {
 		}
 	}
 	
-	/**
+	*//**
 	 * 更换手机号
-	 */
+	 *//*
 	@Before(UpdateInterceptor.class)
 	public void upPhone(){
 		try {
@@ -441,9 +441,9 @@ public class UserController {
 		}
 	}
 	
-	/**
+	*//**
 	 * 更换key值
-	 */
+	 *//*
 	@Before(UpdateInterceptor.class)
 	public void upKey(){
 		try {
@@ -458,5 +458,5 @@ public class UserController {
 			renderJson("{\"info\":\"更改失败！\",\"status\":\"n\"}");
 			e.printStackTrace();
 		}
-	}
+	}*/
 }
